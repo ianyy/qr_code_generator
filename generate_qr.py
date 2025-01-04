@@ -1,7 +1,14 @@
 import qrcode
+import yaml
 
-# Data to encode
-data = "https://www.example.com"
+# Load configuration from YAML file
+with open('config.yaml', 'r') as file:
+    config = yaml.safe_load(file)
+
+input_data = config['input_data']
+data = input_data['text']
+output_path = input_data['output_path']
+image_format = input_data['image_format'] # Image format is not directly used with this library
 
 # Generate QR code
 qr = qrcode.QRCode(
@@ -16,6 +23,6 @@ qr.make(fit=True)
 img = qr.make_image(fill_color="black", back_color="white")
 
 # Save the image
-img.save("example_qr.png")
+img.save(output_path)
 
-print("QR code generated and saved as example_qr.png")
+print(f"QR code generated and saved as {output_path}")
