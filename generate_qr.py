@@ -8,7 +8,6 @@ with open('config.yaml', 'r') as file:
 input_data = config['input_data']
 data = input_data['text']
 output_path = input_data['output_path']
-image_format = input_data['image_format'] # Image format is not directly used with this library
 
 # Generate QR code
 qr = qrcode.QRCode(

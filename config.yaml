@@ -1,4 +1,3 @@
 input_data:
   text: "Hello, QR Code!"
   output_path: "qrcode.png"
-  image_format: "PNG"
