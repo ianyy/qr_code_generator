@@ -10,7 +10,6 @@ This project contains a Python script (`generate_qr.py`) that generates QR codes
    input_data:
      text: "Your text or URL to encode"
      output_path: "desired_output_filename.png"
-     image_format: "PNG" # Currently not used by the script
    ```
 
 2. **Dependencies:** Ensure you have the following Python libraries installed:
@@ -38,7 +37,3 @@ With the following `config.yaml`:
 input_data:
   text: "https://www.example.com"
   output_path: "example_qr.png"
-  image_format: "PNG"
-```
-
-Running `python generate_qr.py` will create an image file named `example_qr.png` containing the QR code for `https://www.example.com`.
